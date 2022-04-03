@@ -1,0 +1,89 @@
+﻿@model CadastroUsuario.Models.Usuario
+
+@{
+    ViewData["Title"] = "ExcluirUsuario";
+}
+
+<h1>Excluir Usuário</h1>
+
+<h3 class="badge badge-secondary">Você tem certeza que deseja excluir este usuário?</h3>
+<div class="ex-del">
+    <hr />
+    <dl>
+        <dt class = "row-sm-2 text-center">
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+        <dd class = "row-sm-10">
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+        <dt class = "row-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "row-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "row-sm-2">
+            @Html.DisplayNameFor(model => model.TipoTel)
+        </dt>
+        <dd class = "row-sm-10">
+            @Html.DisplayFor(model => model.TipoTel)
+        </dd>
+        <dt class = "row-sm-2">
+            @Html.DisplayNameFor(model => model.DDD)
+        </dt>
+        <dd class = "row-sm-10">
+            @Html.DisplayFor(model => model.DDD)
+        </dd>
+        <dt class = "rowv-sm-2">
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd class = "row-sm-10">
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+        <dt class = "row-sm-2">
+            @Html.DisplayNameFor(model => model.Rua)
+        </dt>
+        <dd class = "row-sm-10">
+            @Html.DisplayFor(model => model.Rua)
+        </dd>
+        <dt class = "row-sm-2">
+            @Html.DisplayNameFor(model => model.NumeroResidencia)
+        </dt>
+        <dd class = "row-sm-10">
+            @Html.DisplayFor(model => model.NumeroResidencia)
+        </dd>
+        <dt class = "row-sm-2">
+            @Html.DisplayNameFor(model => model.Cep)
+        </dt>
+        <dd class = "row-sm-10">
+            @Html.DisplayFor(model => model.Cep)
+        </dd>
+        <dt class = "row-sm-2">
+            @Html.DisplayNameFor(model => model.Bairro)
+        </dt>
+        <dd class = "row-sm-10">
+            @Html.DisplayFor(model => model.Bairro)
+        </dd>
+        <dt class = "row-sm-2">
+            @Html.DisplayNameFor(model => model.Cidade)
+        </dt>
+        <dd class = "row-sm-10">
+            @Html.DisplayFor(model => model.Cidade)
+        </dd>
+        <dt class = "row-sm-2">
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+        <dd class = "row-sm-10">
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+
+    </dl>
+    
+    
+    <form asp-action="ExcluirUsuario">
+        <input type="hidden" asp-for="UsuarioId" />
+        <input type="submit" value="Excluir" class="btn btn-danger" />
+        <a class="btn btn-secondary" asp-action="Index">Voltar</a>
+    </form>
+</div>

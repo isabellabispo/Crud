@@ -1,0 +1,108 @@
+﻿@model IEnumerable<CadastroUsuario.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Gerenciamento de Usuários</h2>
+
+<br />
+
+<h3 class="badge badge-secondary">Realize o cadastro e o gerenciamento dos usuários cadastrados</h3>
+
+<br/>
+<br />
+
+<p>
+    <a class="btn btn-primary text-left" asp-action="CriarUsuario">Criar Novo Usuário &raquo;</a>
+</p>
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.CPF)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.TipoTel)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.DDD)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Telefone)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Rua)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.NumeroResidencia)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Cep)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Bairro)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Cidade)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th class="text-center">
+                <p class="align-bottom">Ações</p>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.CPF)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.TipoTel)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.DDD)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.Telefone)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.Rua)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.NumeroResidencia)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.Cep)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.Bairro)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.Cidade)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.Estado)
+                </td>
+                <td class="btn-group">
+                    <a class="btn btn-primary" asp-action="AtualizarUsuario" asp-route-id="@item.UsuarioId">Editar</a>
+
+                    <a class="btn btn-danger" asp-action="ExcluirUsuario" asp-route-id="@item.UsuarioId">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
